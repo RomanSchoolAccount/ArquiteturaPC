@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portefólio dos trabalhos de Arquitetura de Computadores.">
+  <title>AC Projects | Arquitetura de Computadores</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="AC Projects - Início">
+      <span class="brand-chip">▦</span><span>AC <b>Projects</b></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="nav" id="nav">
+      <a class="active" href="#inicio">Início</a>
+      <a href="#trabalhos">Trabalhos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">☼</button>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span>✦</span> ARQUITETURA DE COMPUTADORES</p>
+        <h1>Os meus trabalhos de <span>AC</span></h1>
+        <p class="hero-text">Aqui encontrarás os meus projetos e trabalhos desenvolvidos na disciplina de Arquitetura de Computadores, incluindo análises, implementações e simulações de sistemas digitais e processadores.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#trabalhos">▤ &nbsp; Ver trabalhos</a>
+          <a class="button button-outline" href="#sobre">ⓘ &nbsp; Sobre este site</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="circuit circuit-one"></div><div class="circuit circuit-two"></div>
+        <div class="cpu"><span>CPU</span><i></i></div>
+        <div class="chip-label">PROCESSING UNIT <span>● ONLINE</span></div>
+      </div>
+    </section>
+
+    <section class="projects-section section-wrap" id="trabalhos">
+      <div class="section-heading">
+        <div><h2>Trabalhos <span>Recentes</span></h2><p>Uma seleção dos meus trabalhos de AC.</p></div>
+        <div class="project-controls">
+          <input id="searchInput" type="search" placeholder="Pesquisar trabalhos..." aria-label="Pesquisar trabalhos">
+          <select id="categoryFilter" aria-label="Filtrar por categoria"><option value="all">Todas as categorias</option></select>
+        </div>
+      </div>
+      <div class="project-grid" id="projectGrid"></div>
+      <p class="empty-state" id="emptyState" hidden>Não foram encontrados trabalhos. Experimenta outra pesquisa.</p>
+      <p class="admin-note">Para adicionar ou alterar trabalhos, edita a lista <code>projects</code> no ficheiro <code>js/script.js</code>.</p>
+    </section>
+
+    <section class="about-section section-wrap" id="sobre">
+      <div class="about-icon">⌘</div>
+      <div><p class="eyebrow">SOBRE O PORTefÓLIO</p><h2>Aprender. Construir. <span>Compreender.</span></h2>
+        <p>Este website reúne os trabalhos realizados ao longo da disciplina de Arquitetura de Computadores. Cada projeto pode incluir uma descrição, imagens, código-fonte, relatórios e outros ficheiros de apoio.</p>
+      </div>
+    </section>
+
+    <section class="contact-section section-wrap" id="contacto">
+      <div><p class="eyebrow">CONTACTO</p><h2>Vamos falar?</h2><p>Envia-me uma mensagem ou consulta os meus projetos.</p></div>
+      <a class="button button-primary" href="mailto:oseuemail@example.com">✉ &nbsp; Enviar email</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#inicio"><span class="brand-chip">▦</span><span>AC <b>Projects</b></span></a>
+    <p>“Compreender o hardware é construir o futuro.”</p>
+    <span class="copyright">© <span id="year"></span> AC Projects</span>
+  </footer>
+
+  <dialog id="projectDialog" class="project-dialog">
+    <button class="dialog-close" id="dialogClose" aria-label="Fechar">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+  <script src="../js/script.js"></script>
+</body>
+</html>
